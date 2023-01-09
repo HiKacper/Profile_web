@@ -1,1 +1,19 @@
 // Specific CSS for your home-page
+// .parent {
+//   position: absolute;
+// }
+
+.underline {
+  position: relative;
+}
+.underline::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 111%;
+  height: 8px;
+  left: 0;
+  bottom: 0;
+  opacity: 60%;
+  background-color: rgb(158, 231, 30); /* apply solid black underline */
+}
