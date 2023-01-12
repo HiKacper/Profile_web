@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>My landing page</title>
-  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-  <!-- We need this line below for responsiveness! -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>My landing page</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+    <!-- We need this line below for responsiveness! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<body>
-  <div>
-    <p>Hello
-      <span class="underline"> world</span>
-    </p>
+  <body>
+    <div>
+      <p>Hello
+        <span class="underline"> world</span>
+      </p>
 
-    <!-- The video -->
-    <video autoplay muted loop id="myVideo">
-      <source src="0110(5).mp4" type="video/mp4">
-    </video>
+      <!-- The video -->
+      <video autoplay muted loop id="myVideo">
+        <source src="0110(5).mp4" type="video/mp4">
+      </video>
+      </div>
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+      <h1>My name is Kacper</h1>
+      <p>Originally from Poland. My home is where my family is. I live in Belgium...</p>
+      <!-- Use a button to pause/play the video with JavaScript -->
+      <button id="myBtn" onclick="myFunction()">Pause</button>
     </div>
-  <!-- Optional: some overlay text to describe the video -->
-  <div class="content">
-    <h1>My name is Kacper</h1>
-    <p>Originally from Poland. I am where my family is. I live in Belgium...</p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <button id="myBtn" onclick="myFunction()">Pause</button>
-  </div>
-</body>
+
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+    </body>
+</html>
