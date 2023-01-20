@@ -1,6 +1,15 @@
 {
+  "name": "profile_web",
+  "version": "1.0.0",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.3"
-  }
+    "bootstrap": "^5.2.3",
+    "webpack": "^4.44.1"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js"
+  },
+  "license": "MIT"
 }
